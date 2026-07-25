@@ -1,15 +1,15 @@
 %define upstream_name    Class-Adapter
-%define upstream_version 1.08
+%define upstream_version 1.09
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Generate Class::Adapter classes
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://github.com/karenetheridge/Class-Adapter
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Adapter-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
