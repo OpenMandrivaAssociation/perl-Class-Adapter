@@ -1,15 +1,13 @@
 %define upstream_name    Class-Adapter
-%define upstream_version 1.09
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.09
+Release:	2
 
 Summary:	Generate Class::Adapter classes
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/karenetheridge/Class-Adapter
-Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Adapter-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/Class-Adapter-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -34,7 +32,7 @@ What is an Adapter?
     that can't be achieved by inheritance (sub-classing).
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -71,8 +69,7 @@ make test
 
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 1.50.0-1mdv2010.0
 + Revision: 401707
-- rebuild using %%perl_convert_version
-- fixed license field
+- rebuild using %1.09 fixed license field
 
 * Tue Nov 11 2008 Jérôme Quelin <jquelin@mandriva.org> 1.05-1mdv2009.1
 + Revision: 302309
